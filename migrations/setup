@@ -1,0 +1,14 @@
+Setting up the database using PSQL
+
+   psql
+1. CREATE DATABASE "Makersbnb";
+   \c Makersbnb
+
+2. CREATE TABLE users(id SERIAL PRIMARY KEY, email VARCHAR(60), password VARCHAR(60));
+   \q
+
+   psql
+3. CREATE DATABASE "Makersbnb_test";
+   \c Makersbnb_test
+
+4. CREATE TABLE users(id SERIAL PRIMARY KEY, email VARCHAR(60), password VARCHAR(60));
