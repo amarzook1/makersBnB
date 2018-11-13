@@ -24,7 +24,7 @@ class Makersbnb < Sinatra::Base
   post '/listspace' do
     space = Space.new
     space.Create(name: params[:name], description: params[:description], price: params[:price])
-    redirict '/home'
+    redirect '/home'
   end
 
   post '/login/sign_up' do

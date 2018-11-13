@@ -3,13 +3,13 @@ require 'pg'
 class Space
   attr_reader :id, :name, :description, :price, :availability
 
-  def initialize(id: , name:, description:, price:, availability:)
+  def initialize(params = {})
     @db = PG.connect(dbname: 'Makersbnb')
-    @id = id
-    @name = name
-    @description = description
-    @price = price
-    @availability = availability
+    @id = (:id)
+    @name = (:name)
+    @description = (:description)
+    @price = (:price)
+    @availability = (:availability)
   end
 
   def Create(name:, description:, price:)
