@@ -1,14 +1,31 @@
 Setting up the database using PSQL
 
-   psql
-1. CREATE DATABASE "Makersbnb";
+BELOW IS FOR THE 'users' TABLE
+
+1. open psql
+   CREATE DATABASE "Makersbnb";
    \c Makersbnb
 
 2. CREATE TABLE users(id SERIAL PRIMARY KEY, email VARCHAR(60), password VARCHAR(60));
    \q
 
-   psql
-3. CREATE DATABASE "Makersbnb_test";
+1. open psql
+   CREATE DATABASE "Makersbnb_test";
    \c Makersbnb_test
 
 4. CREATE TABLE users(id SERIAL PRIMARY KEY, email VARCHAR(60), password VARCHAR(60));
+
+BELOW IS FOR THE 'spaces' TABLE
+
+1. open psql
+   \c Makersbnb;
+   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id VARCHAR(60), name VARCHAR(60), description VARCHAR(60), price VARCHAR(60), availability BOOLEAN);
+
+2. ALTER TABLE spaces ALTER COLUMN availability SET DEFAULT TRUE;
+   \q
+
+3. open psql
+   \c Makersbnb_test;
+   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id VARCHAR(60), name VARCHAR(60), description VARCHAR(60), price VARCHAR(60), availability BOOLEAN);
+
+2. ALTER TABLE spaces ALTER COLUMN availability SET DEFAULT TRUE;
