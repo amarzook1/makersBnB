@@ -10,3 +10,5 @@ gem "sinatra"
 gem "sinatra-flash"
 gem "rspec"
 gem "capybara"
+gem 'shotgun'
+gem 'rake'
