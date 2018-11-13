@@ -10,3 +10,4 @@ gem "sinatra"
 gem "sinatra-flash"
 gem "rspec"
 gem "capybara"
+gem 'bootstrap', '~> 4.1.3'
