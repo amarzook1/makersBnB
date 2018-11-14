@@ -58,5 +58,4 @@ class User
     result.map { |users| users['id']}
   end
 
-
 end
