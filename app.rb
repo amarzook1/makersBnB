@@ -22,8 +22,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/listspace' do
-    space = Space.new
-    space.Create(name: params[:name], description: params[:description], price: params[:price])
+    Space.create(name: params[:name], description: params[:description], price: params[:price])
     redirect '/home'
   end
 
