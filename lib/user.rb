@@ -47,4 +47,16 @@ class User
     result.map { |users| users['email'] }
   end
 
+  def self.get_user_id(li_email:, li_password:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'Makersbnb')
+    end
+    query = "SELECT id FROM users WHERE email = '#{li_email}' AND password = '#{li_password}';"
+    result = connection.exec(query)
+    result.map { |users| users['id']}
+  end
+
+
 end
