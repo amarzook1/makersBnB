@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Book a space</title>
+<link rel="stylesheet" type="text/css" href="../Datedropper3-master/datedropper.css">
+
+<style type="text/css">
+
+  #t1
+  {
+    width: 30%;
+    padding: 18px 30px;
+    position: absolute;
+    top:50%;
+    left: 30%;
+    font-size: 30px;
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(-50%);
+    border-radius: 10px;
+  }
+
+</style>
+</head>
+<body>
+  <input type = "text" id="t1" data-large-mode="true" data-large-default="true" placeholder="Checkin" data-init-set="false">
+  <script src="../jquery-3.3.1.min.js"></script>
+  <script src="../Datedropper3-master/datedropper.js"></script>
+  <script>
+  $('input').dateDropper()
+  </script>
+</body>
+</html>
