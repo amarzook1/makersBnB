@@ -1,0 +1,107 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.imgur.com/LuImiDR.jpg");
+  background-size: cover;
+  font-size: 16px;
+  color: #242323;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+#login-box
+{
+  position: relative;
+  margin: 50 auto;
+  top: 100px;
+  height: 300px;
+  width: 600px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0, 0.8);
+}
+
+.left-box
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+h1
+{
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="password"]
+{
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #79CCCD ;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]
+{
+  margin-top: 30px;
+  width: 120px;
+  height: 32px;
+  background: #F16664;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.right-box
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+  background-color: #FFF6E6;
+}
+
+h2
+{
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 20px;
+}
+.or
+{
+  position: absolute;
+  top: 140px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6 );
+  line-height: 40px;
+  text-align: center;
+}
