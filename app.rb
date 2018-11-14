@@ -5,6 +5,10 @@ require './lib/space'
 class Makersbnb < Sinatra::Base
   set :method_override, true
 
+  get '/' do
+    redirect :login
+  end
+
   get '/login' do
     erb :login
   end
