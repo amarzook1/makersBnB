@@ -55,7 +55,7 @@ class Space
     end
     query = 'SELECT * FROM spaces;'
     result = connection.exec(query)
-    result.map { |spaces| spaces['availability'] }
+    result.map { |spaces| spaces['price'] }
   end
 
   def self.get_availability
