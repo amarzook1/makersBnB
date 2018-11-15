@@ -1,73 +1,82 @@
-/*-----------
------All-----
------------*/
+/*---All----*/
 
 * {
   margin: 0;
-  padding: 0;
+	padding: 0;
+	background-size: cover;
   box-sizing: border-box;
 }
 
-/*---logo---*/
+/*---Header---*/
 
-	.logo {
-		position:absolute;
-		left:0;
-		top:0;
-		float: left;
-		border-top: none;
-		border-bottom-color: transparent;
-	}
-	.logo:hover{
-		background-color: #F5F5F5;
-		cursor: pointer;
-	}
+header {
+	position:fixed;
+	top:0;
+	width: 100%;
+	height: 73px;
+	font-family: Circular,Helvetica,Arial,sans-serif;
+	color: #F16664;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid #DCE0E0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
 
-/*---main-nav---*/
+/*---Logo---*/
 
-	.main-nav{
-		float:right;
-	}
-	.main-nav li{
-		float: left;
-		list-style: none;
-		padding: 22px 18px;
-		border: 1px solid #DCE0E0;
-		height: 61px;
-		font-size: 14px;
-		border-left-color: transparent;
-		border-bottom-color: transparent;
-		border-top: none;
-	}
-		.main-nav li:last-child{
-		border-right-color: transparent;	
-		}
-		.main-nav li:hover{
-			background-color: #F5F5F5;
-			cursor: pointer;
-		}
-	.main-nav li button{
-		margin-top: -10px;
-		width: 120px;
-		height: 30px;
-		background: none;
-		border: 2px solid #C4C4C4;
-		border-radius: 5px;
-		background-color: tranparent;
-	}
-		.main-nav li button:hover{
-			border-color: #AAAAAA;
-			cursor: pointer;
-		}
-		.main-nav li button:focus {
-			outline: none;
-		}
+.logo {
+	width: 145px;
+	height: 72px;
+	padding: 2px 16px;
+	float: left;
+	border: 1px solid #DCE0E0;
+	border-top: none;
+	border-bottom-color: transparent;
+}
+.logo:hover{
+	background-color: #F5F5F5;
+	cursor: pointer;
+}
 
-/*----------------
----Main Content---
-----------------*/
+/*---Navigation-Bar---*/
 
-.site-content{
+.nav-bar {
+	float:right;
+}
+.nav-bar li {
+	float: left;
+	list-style: none;
+	padding: 26px 18px;
+	border: 1px solid #DCE0E0;
+	height: 72px;
+	font-size: 14px;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-top: none;
+}
+.nav-bar li:hover {
+	background-color: #F5F5F5;
+	cursor: pointer;
+}
+.nav-bar li button {
+	color: #F16664;
+	margin-top: -5px;
+	width: 120px;
+	height: 30px;
+	background: none;
+	border: 2px solid rgba(230, 109, 107, 0.404);
+	border-radius: 5px;
+	background-color: tranparent;
+}
+.nav-bar li button:hover {
+	border-color: #AAAAAA;
+	cursor: pointer;
+}
+	
+/*---Main Content---*/
+
+.main-content {
 	margin: 130px auto;
 	width: 940px;
 	height: 1500px;
@@ -75,30 +84,30 @@
 }
 /*---title---*/
 
-	.title{
-		font-size: 46px;
-		font-weight: 100;
-		color: #484848;
-		margin-bottom: 60px;
-	}
-	.title span{
-		font-weight: 800;
-		color: #FF5A5F;
-	}
+.title {
+	font-size: 46px;
+	font-weight: 100;
+	color: #484848;
+	margin-bottom: 60px;
+}
+.title span{
+	font-weight: 800;
+	color: #79CCCD;
+}
 
 /*---search-row---*/
 
-	.search-input{
-		padding: 10px;
-		float: left;
-		width: 330px;
-		height: 42px;
-		border: 1px solid #757575;
-		border-right-color: transparent;
-		border-top-left-radius: 3px;
-		border-bottom-left-radius: 3px;
-		font-size: 16px;
-	}
+.search-input{
+	padding: 10px;
+	float: left;
+	width: 330px;
+	height: 42px;
+	border: 1px solid #757575;
+	border-right-color: transparent;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	font-size: 16px;
+}
 	.checks-input{
 		float: left;
 		width: 330px;
@@ -157,9 +166,9 @@
 		float: left;
 		width: 150px;
 		height: 42px;
-		border: 1px solid #FF5A5F;
+		border: 1px solid #79CCCD;
 		margin: 0 0 3px 0;
-		background-color: #FF5A5F;
+		background-color: #79CCCD;
 		color: #fff;
 		font-weight: bold;
 		font-size: 14px;
@@ -167,11 +176,11 @@
 		border-bottom-right-radius: 3px;
 	}
 	.search-btn:hover{
-		background-color: #FF7E82;
+		background-color: #79CCCD;
 		cursor: pointer;
 	}
 
-/*---space-prices---*/
+/*---Space-Prices---*/
 
 .prices{
 	width: 953px;
@@ -188,9 +197,7 @@
 		display: inline-block;
 		margin: 30px 5px 0 5px;
 	}
-	.img:last-child { 
-		margin-right: 0; 
-	}
+	
 	.img img{
 		width: 301px;
 		height: 206px;
