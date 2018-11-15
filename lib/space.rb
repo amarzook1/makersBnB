@@ -25,15 +25,48 @@ class Space
     connection.exec(query)
   end
 
-  def self.space_table
+  def self.get_name
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'Makersbnb_test')
     else
       connection = PG.connect(dbname: 'Makersbnb')
     end
-    query = 'SELECT name FROM spaces;'
+    query = 'SELECT * FROM spaces;'
     result = connection.exec(query)
     result.map { |spaces| spaces['name'] }
+  end
+
+  def self.get_description
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'Makersbnb')
+    end
+    query = 'SELECT * FROM spaces;'
+    result = connection.exec(query)
+    result.map { |spaces| spaces['description'] }
+  end
+
+  def self.get_price
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'Makersbnb')
+    end
+    query = 'SELECT * FROM spaces;'
+    result = connection.exec(query)
+    result.map { |spaces| spaces['availability'] }
+  end
+
+  def self.get_availability
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'Makersbnb')
+    end
+    query = 'SELECT * FROM spaces;'
+    result = connection.exec(query)
+    result.map { |spaces| spaces['availability'] }
   end
 
 end
