@@ -36,20 +36,12 @@ class Space
     result.map { |spaces| spaces['name'] }
   end
 
-<<<<<<< HEAD
-  def self.confirm
-=======
   def self.get_description
->>>>>>> d3d87c1b6bba6f9d0ed36bf2a258d1e538d17875
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'Makersbnb_test')
     else
       connection = PG.connect(dbname: 'Makersbnb')
     end
-<<<<<<< HEAD
-    result = connection.exec('SELECT name FROM spaces')
-    result.map { |spaces| spaces['name']}
-=======
     query = 'SELECT * FROM spaces;'
     result = connection.exec(query)
     result.map { |spaces| spaces['description'] }
@@ -75,7 +67,6 @@ class Space
     query = 'SELECT * FROM spaces;'
     result = connection.exec(query)
     result.map { |spaces| spaces['availability'] }
->>>>>>> d3d87c1b6bba6f9d0ed36bf2a258d1e538d17875
   end
 
 end
