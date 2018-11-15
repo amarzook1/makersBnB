@@ -10,7 +10,10 @@ describe Space do
   end
   describe '#create' do
     it 'creates a new space' do
-      expect(User.space_table).to include('t_name')
+      x = Space.create(name: 'xt_name', description: 'xt_description', price: '1100')
+      expect(Space.get_name).to include('xt_name')
+      expect(Space.get_description).to include('xt_description')
+      expect(Space.get_price).to include('1100')
     end
   end
 end
