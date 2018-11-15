@@ -14,6 +14,28 @@ describe Space do
       expect(Space.get_name).to include('xt_name')
       expect(Space.get_description).to include('xt_description')
       expect(Space.get_price).to include('1100')
+      setup_test_database
+    end
+  end
+  describe '#update' do
+    it 'updates the availability' do
+      Space.update
+      expect(Space.get_availability).to include('f')
+      setup_test_database
+    end
+  end
+  describe '#get' do
+    it 'get_name gets the name' do
+      expect(Space.get_name).to include('t_name')
+    end
+    it 'get_desc gets the desc' do
+      expect(Space.get_description).to include('t_description')
+    end
+    it 'get_price gets the price' do
+      expect(Space.get_price).to include('100')
+    end
+    it 'get_availability gets the availability' do
+      expect(Space.get_availability).to include('t')
     end
   end
 end
