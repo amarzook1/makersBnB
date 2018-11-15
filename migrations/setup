@@ -19,13 +19,13 @@ BELOW IS FOR THE 'spaces' TABLE
 
 1. open psql
    \c Makersbnb;
-   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id VARCHAR(60), name VARCHAR(60), description VARCHAR(60), price VARCHAR(60), availability BOOLEAN);
+   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id INTEGER references users(id), name VARCHAR(60), description VARCHAR(60), price INTEGER, availability BOOLEAN);
 
 2. ALTER TABLE spaces ALTER COLUMN availability SET DEFAULT TRUE;
    \q
 
 3. open psql
    \c Makersbnb_test;
-   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id VARCHAR(60), name VARCHAR(60), description VARCHAR(60), price VARCHAR(60), availability BOOLEAN);
+   CREATE TABLE spaces(id SERIAL PRIMARY KEY, users_id INTEGER references users(id), name VARCHAR(60), description VARCHAR(60), price INTEGER, availability BOOLEAN);
 
 2. ALTER TABLE spaces ALTER COLUMN availability SET DEFAULT TRUE;

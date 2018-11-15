@@ -1,7 +1,13 @@
 require 'sinatra/base'
 require './lib/user'
+require './lib/space'
 
 class Makersbnb < Sinatra::Base
+  set :method_override, true
+
+  get '/' do
+    redirect :login
+  end
 
   get '/login' do
     erb :login
@@ -13,6 +19,15 @@ class Makersbnb < Sinatra::Base
 
   get '/fail' do
     erb :fail
+  end
+
+  get '/listspace' do
+    erb :listspace
+  end
+
+  post '/listspace' do
+    Space.create(name: params[:name], description: params[:description], price: params[:price])
+    redirect '/home'
   end
 
   post '/login/sign_up' do
