@@ -36,4 +36,14 @@ class Space
     result.map { |spaces| spaces['name'] }
   end
 
+  def self.confirm
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'Makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'Makersbnb')
+    end
+    result = connection.exec('SELECT name FROM spaces')
+    result.map { |spaces| spaces['name']}
+  end
+
 end
