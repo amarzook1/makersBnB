@@ -1,10 +1,7 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="src/book_a_space.css">
+<link rel="stylesheet" type="text/css" href="book_a_space.css">
 <link rel="stylesheet" type="text/css" href="../Datedropper3-master/datedropper.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../Datedropper3-master/datedropper.js"></script>
-</head>
+
 <header>
   <div class="logo">
     <img src="https://i.imgur.com/J1sKXFz.png" width="110" height="58">
@@ -23,10 +20,14 @@
 		  <input class="search-input" type="text" placeholder="Where are you going?"></input>
 	
 		  <div class="checks-input">
-      Check In:
+        <script src="../jquery-3.3.1.min.js"></script>
+        <script src="../Datedropper3-master/datedropper.js"></script>
         <input class="check-in" type="text" data-large-mode="true" data-large-default="false" placeholder="Check In" data-init-set="false"></input>	
-      Check Out:
         <input class="check-out" type="text" data-large-mode="true" data-large-default="false" placeholder="Check Out" data-init-set="false"></input>
+        <script>
+          $('.checks-input > .check-in').dateDropper()
+          $('.checks-input > .check-out').dateDropper()
+        </script>
       </div>
     
 		  <select class="guests">
