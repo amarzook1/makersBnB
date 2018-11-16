@@ -44,5 +44,9 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  get '/createspace' do
+    erb :createspace
+  end
+
   run! if app_file == $0
 end

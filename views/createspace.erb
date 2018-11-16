@@ -1,0 +1,29 @@
+  <head>
+  <title>List A Space</title>
+  <link rel="stylesheet" href="src/createspace.css">
+  </head>
+
+  <header>
+  <div class="logo">
+    <img src="https://i.imgur.com/J1sKXFz.png" width="110" height="58">
+  </div>
+  <ul class="nav-bar">
+    <li>Home</li>
+    <li>Requests</li>
+    <li>Log out</li>
+  </ul>
+</header>
+
+  <body>
+    <div class="form">
+    <h1>Become a host</h1>
+    <form action="/new" method="post">
+      <input type="text" name="name" placeholder="Name" required="true"/>
+      <input type="text" name="description" placeholder="Description" required="true"/>
+      <input type="text" name="1_address" placeholder="Address Line 1" required="true"/>
+      <input type="text" name="2_address" placeholder="Address Line 2" required="true"/>
+      <input type="text" name="postcode" placeholder="Postcode" required="true"/>
+      <input type="text" name="price" placeholder="Price" required="true"/>
+      <input type="submit" value="List space" />
+    </form>
+  </body>
